@@ -1,7 +1,7 @@
 # 🎄 Christmas PCB Projects
 
-Each year, I design a custom PCB for my girlfriend as a Christmas gift until she finally tells me what she *actually* wants. 
-Surprisingly, she likes the 2022 one better than the fancy 2023 one thou,
+Each year, I design a custom PCB for my girlfriend as a Christmas gift until she finally tells me what she prefers. 
+Surprisingly, she likes the 2022 one better than the fancy 2023 one thou.
 
 These projects are built under a time crunch, so looking back there are definitely some questionable design choices. That said, I aim to improve something every year, here and there.
 
