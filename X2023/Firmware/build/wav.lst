@@ -1,0 +1,490 @@
+ARM GAS  /tmp/ccn20qAL.s 			page 1
+
+
+   1              		.cpu cortex-m4
+   2              		.eabi_attribute 27, 1
+   3              		.eabi_attribute 28, 1
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.file	"wav.cpp"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.rodata._ZN7Storage3WAVC2Ev.str1.4,"aMS",%progbits,1
+  18              		.align	2
+  19              	.LC0:
+  20 0000 64617461 		.ascii	"data\000"
+  20      00
+  21              		.section	.text._ZN7Storage3WAVC2Ev,"ax",%progbits
+  22              		.align	1
+  23              		.global	_ZN7Storage3WAVC2Ev
+  24              		.arch armv7e-m
+  25              		.syntax unified
+  26              		.thumb
+  27              		.thumb_func
+  28              		.fpu fpv4-sp-d16
+  30              	_ZN7Storage3WAVC2Ev:
+  31              		.fnstart
+  32              	.LVL0:
+  33              	.LFB137:
+  34              		.file 1 "Modules/Src/wav.cpp"
+   1:Modules/Src/wav.cpp **** #include "wav.h"
+   2:Modules/Src/wav.cpp **** 
+   3:Modules/Src/wav.cpp **** Storage::WAV* Storage::wav;
+   4:Modules/Src/wav.cpp **** 
+   5:Modules/Src/wav.cpp **** namespace Storage
+   6:Modules/Src/wav.cpp **** {
+   7:Modules/Src/wav.cpp ****     WAV::WAV()
+  35              		.loc 1 7 5 view -0
+  36              		.cfi_startproc
+  37              		@ args = 0, pretend = 0, frame = 0
+  38              		@ frame_needed = 0, uses_anonymous_args = 0
+  39              		.loc 1 7 5 is_stmt 0 view .LVU1
+  40 0000 10B5     		push	{r4, lr}
+  41              	.LCFI0:
+  42              		.cfi_def_cfa_offset 8
+  43              		.cfi_offset 4, -8
+  44              		.cfi_offset 14, -4
+  45 0002 0446     		mov	r4, r0
+  46              	.LBB2:
+  47              		.loc 1 7 14 view .LVU2
+  48 0004 4822     		movs	r2, #72
+  49 0006 0021     		movs	r1, #0
+  50 0008 FFF7FEFF 		bl	memset
+ARM GAS  /tmp/ccn20qAL.s 			page 2
+
+
+  51              	.LVL1:
+  52              		.loc 1 7 14 view .LVU3
+  53 000c 054B     		ldr	r3, .L3
+  54 000e 93E80300 		ldm	r3, {r0, r1}
+  55 0012 2063     		str	r0, [r4, #48]
+  56 0014 84F83410 		strb	r1, [r4, #52]
+  57 0018 0023     		movs	r3, #0
+  58 001a 84F84C35 		strb	r3, [r4, #1356]
+  59              	.LBE2:
+   8:Modules/Src/wav.cpp ****     {
+   9:Modules/Src/wav.cpp ****     }
+  60              		.loc 1 9 5 view .LVU4
+  61 001e 2046     		mov	r0, r4
+  62 0020 10BD     		pop	{r4, pc}
+  63              	.LVL2:
+  64              	.L4:
+  65              		.loc 1 9 5 view .LVU5
+  66 0022 00BF     		.align	2
+  67              	.L3:
+  68 0024 00000000 		.word	.LC0
+  69              		.cfi_endproc
+  70              	.LFE137:
+  71              		.cantunwind
+  72              		.fnend
+  74              		.global	_ZN7Storage3WAVC1Ev
+  75              		.thumb_set _ZN7Storage3WAVC1Ev,_ZN7Storage3WAVC2Ev
+  76              		.section	.text._ZN7Storage3WAV14get_wav_headerEP3FILPc,"ax",%progbits
+  77              		.align	1
+  78              		.global	_ZN7Storage3WAV14get_wav_headerEP3FILPc
+  79              		.syntax unified
+  80              		.thumb
+  81              		.thumb_func
+  82              		.fpu fpv4-sp-d16
+  84              	_ZN7Storage3WAV14get_wav_headerEP3FILPc:
+  85              		.fnstart
+  86              	.LVL3:
+  87              	.LFB139:
+  10:Modules/Src/wav.cpp **** 
+  11:Modules/Src/wav.cpp ****     void WAV::get_wav_header(FIL*file, char* wav_file_name)
+  12:Modules/Src/wav.cpp ****     {
+  88              		.loc 1 12 5 is_stmt 1 view -0
+  89              		.cfi_startproc
+  90              		@ args = 0, pretend = 0, frame = 0
+  91              		@ frame_needed = 0, uses_anonymous_args = 0
+  92              		.loc 1 12 5 is_stmt 0 view .LVU7
+  93 0000 2DE9F041 		push	{r4, r5, r6, r7, r8, lr}
+  94              		.save {r4, r5, r6, r7, r8, lr}
+  95              	.LCFI1:
+  96              		.cfi_def_cfa_offset 24
+  97              		.cfi_offset 4, -24
+  98              		.cfi_offset 5, -20
+  99              		.cfi_offset 6, -16
+ 100              		.cfi_offset 7, -12
+ 101              		.cfi_offset 8, -8
+ 102              		.cfi_offset 14, -4
+ 103 0004 0446     		mov	r4, r0
+ 104 0006 0D46     		mov	r5, r1
+ARM GAS  /tmp/ccn20qAL.s 			page 3
+
+
+ 105 0008 1146     		mov	r1, r2
+ 106              	.LVL4:
+  13:Modules/Src/wav.cpp ****         uint8_t bytes_read  = 0;
+ 107              		.loc 1 13 9 is_stmt 1 view .LVU8
+  14:Modules/Src/wav.cpp ****         f_open(file, wav_file_name, FA_READ);
+ 108              		.loc 1 14 9 view .LVU9
+ 109              		.loc 1 14 15 is_stmt 0 view .LVU10
+ 110 000a 0122     		movs	r2, #1
+ 111              	.LVL5:
+ 112              		.loc 1 14 15 view .LVU11
+ 113 000c 2846     		mov	r0, r5
+ 114              	.LVL6:
+ 115              		.loc 1 14 15 view .LVU12
+ 116 000e FFF7FEFF 		bl	f_open
+ 117              	.LVL7:
+  15:Modules/Src/wav.cpp ****         f_read(file, this->wav_header.riff_header, 4, (UINT*)bytes_read);
+ 118              		.loc 1 15 9 is_stmt 1 view .LVU13
+ 119              		.loc 1 15 15 is_stmt 0 view .LVU14
+ 120 0012 0023     		movs	r3, #0
+ 121 0014 0422     		movs	r2, #4
+ 122 0016 2146     		mov	r1, r4
+ 123 0018 2846     		mov	r0, r5
+ 124 001a FFF7FEFF 		bl	f_read
+ 125              	.LVL8:
+  16:Modules/Src/wav.cpp ****         f_read(file, &this->wav_header.wav_size, 4, (UINT*)bytes_read);
+ 126              		.loc 1 16 9 is_stmt 1 view .LVU15
+ 127              		.loc 1 16 15 is_stmt 0 view .LVU16
+ 128 001e 0023     		movs	r3, #0
+ 129 0020 0422     		movs	r2, #4
+ 130 0022 04F10801 		add	r1, r4, #8
+ 131 0026 2846     		mov	r0, r5
+ 132 0028 FFF7FEFF 		bl	f_read
+ 133              	.LVL9:
+  17:Modules/Src/wav.cpp ****         f_read(file, this->wav_header.wave_header, 4, (UINT*)bytes_read); //format header, should a
+ 134              		.loc 1 17 9 is_stmt 1 view .LVU17
+ 135              		.loc 1 17 15 is_stmt 0 view .LVU18
+ 136 002c 0023     		movs	r3, #0
+ 137 002e 0422     		movs	r2, #4
+ 138 0030 04F11001 		add	r1, r4, #16
+ 139 0034 2846     		mov	r0, r5
+ 140 0036 FFF7FEFF 		bl	f_read
+ 141              	.LVL10:
+  18:Modules/Src/wav.cpp ****         f_read(file, this->wav_header.fmt_header, 4, (UINT*)bytes_read); //format header, should al
+ 142              		.loc 1 18 9 is_stmt 1 view .LVU19
+ 143              		.loc 1 18 15 is_stmt 0 view .LVU20
+ 144 003a 0023     		movs	r3, #0
+ 145 003c 0422     		movs	r2, #4
+ 146 003e 04F11401 		add	r1, r4, #20
+ 147 0042 2846     		mov	r0, r5
+ 148 0044 FFF7FEFF 		bl	f_read
+ 149              	.LVL11:
+  19:Modules/Src/wav.cpp ****         f_read(file, &this->wav_header.fmt_chunk_size, 4, (UINT*)bytes_read); //should be 16 for PC
+ 150              		.loc 1 19 9 is_stmt 1 view .LVU21
+ 151              		.loc 1 19 15 is_stmt 0 view .LVU22
+ 152 0048 0023     		movs	r3, #0
+ 153 004a 0422     		movs	r2, #4
+ 154 004c 04F11801 		add	r1, r4, #24
+ARM GAS  /tmp/ccn20qAL.s 			page 4
+
+
+ 155 0050 2846     		mov	r0, r5
+ 156 0052 FFF7FEFF 		bl	f_read
+ 157              	.LVL12:
+  20:Modules/Src/wav.cpp ****         f_read(file, &this->wav_header.audio_format, 2, (UINT*)bytes_read); //should be 1 for PCM. 
+ 158              		.loc 1 20 9 is_stmt 1 view .LVU23
+ 159              		.loc 1 20 15 is_stmt 0 view .LVU24
+ 160 0056 0023     		movs	r3, #0
+ 161 0058 0222     		movs	r2, #2
+ 162 005a 04F11C01 		add	r1, r4, #28
+ 163 005e 2846     		mov	r0, r5
+ 164 0060 FFF7FEFF 		bl	f_read
+ 165              	.LVL13:
+  21:Modules/Src/wav.cpp ****         f_read(file, &this->wav_header.num_channels, 2, (UINT*)bytes_read); //1 for mono, 2 for ste
+ 166              		.loc 1 21 9 is_stmt 1 view .LVU25
+ 167              		.loc 1 21 15 is_stmt 0 view .LVU26
+ 168 0064 0023     		movs	r3, #0
+ 169 0066 0222     		movs	r2, #2
+ 170 0068 04F11E01 		add	r1, r4, #30
+ 171 006c 2846     		mov	r0, r5
+ 172 006e FFF7FEFF 		bl	f_read
+ 173              	.LVL14:
+  22:Modules/Src/wav.cpp ****         f_read(file, &this->wav_header.sample_rate, 4, (UINT*)bytes_read); //usually 44100
+ 174              		.loc 1 22 9 is_stmt 1 view .LVU27
+ 175              		.loc 1 22 15 is_stmt 0 view .LVU28
+ 176 0072 0023     		movs	r3, #0
+ 177 0074 0422     		movs	r2, #4
+ 178 0076 04F12001 		add	r1, r4, #32
+ 179 007a 2846     		mov	r0, r5
+ 180 007c FFF7FEFF 		bl	f_read
+ 181              	.LVL15:
+  23:Modules/Src/wav.cpp ****         f_read(file, &this->wav_header.byte_rate, 4, (UINT*)bytes_read); //Number of bytes per seco
+ 182              		.loc 1 23 9 is_stmt 1 view .LVU29
+ 183              		.loc 1 23 15 is_stmt 0 view .LVU30
+ 184 0080 0023     		movs	r3, #0
+ 185 0082 0422     		movs	r2, #4
+ 186 0084 04F12401 		add	r1, r4, #36
+ 187 0088 2846     		mov	r0, r5
+ 188 008a FFF7FEFF 		bl	f_read
+ 189              	.LVL16:
+  24:Modules/Src/wav.cpp ****         f_read(file, &this->wav_header.sample_alignment, 2, (UINT*)bytes_read); //num_channels * By
+ 190              		.loc 1 24 9 is_stmt 1 view .LVU31
+ 191              		.loc 1 24 15 is_stmt 0 view .LVU32
+ 192 008e 0023     		movs	r3, #0
+ 193 0090 0222     		movs	r2, #2
+ 194 0092 04F12801 		add	r1, r4, #40
+ 195 0096 2846     		mov	r0, r5
+ 196 0098 FFF7FEFF 		bl	f_read
+ 197              	.LVL17:
+  25:Modules/Src/wav.cpp ****         f_read(file, &this->wav_header.bit_per_sample, 2, (UINT*)bytes_read); //Number of bits per 
+ 198              		.loc 1 25 9 is_stmt 1 view .LVU33
+ 199              		.loc 1 25 15 is_stmt 0 view .LVU34
+ 200 009c 0023     		movs	r3, #0
+ 201 009e 0222     		movs	r2, #2
+ 202 00a0 04F12C01 		add	r1, r4, #44
+ 203 00a4 2846     		mov	r0, r5
+ 204 00a6 FFF7FEFF 		bl	f_read
+ 205              	.LVL18:
+ARM GAS  /tmp/ccn20qAL.s 			page 5
+
+
+  26:Modules/Src/wav.cpp ****         for(int8_t res = 1; res != 0;)
+ 206              		.loc 1 26 9 is_stmt 1 view .LVU35
+ 207              	.LBB3:
+ 208              		.loc 1 26 20 is_stmt 0 view .LVU36
+ 209 00aa 0127     		movs	r7, #1
+ 210              	.LVL19:
+ 211              	.L8:
+ 212              		.loc 1 26 33 is_stmt 1 discriminator 1 view .LVU37
+ 213 00ac 27B3     		cbz	r7, .L7
+ 214              	.LBB4:
+  27:Modules/Src/wav.cpp ****         {
+  28:Modules/Src/wav.cpp ****             f_read(file, this->wav_header. data_header, 1, (UINT*)bytes_read); //Contains "data"
+ 215              		.loc 1 28 13 view .LVU38
+ 216              		.loc 1 28 44 is_stmt 0 view .LVU39
+ 217 00ae 04F14006 		add	r6, r4, #64
+ 218              		.loc 1 28 19 view .LVU40
+ 219 00b2 0023     		movs	r3, #0
+ 220 00b4 0122     		movs	r2, #1
+ 221 00b6 3146     		mov	r1, r6
+ 222 00b8 2846     		mov	r0, r5
+ 223 00ba FFF7FEFF 		bl	f_read
+ 224              	.LVL20:
+  29:Modules/Src/wav.cpp ****             FSIZE_t fptr = f_tell(file);
+ 225              		.loc 1 29 13 is_stmt 1 view .LVU41
+ 226              		.loc 1 29 21 is_stmt 0 view .LVU42
+ 227 00be D5F81880 		ldr	r8, [r5, #24]
+ 228              	.LVL21:
+  30:Modules/Src/wav.cpp ****             if(wav_header. data_header[0] == 'd')
+ 229              		.loc 1 30 13 is_stmt 1 view .LVU43
+ 230              		.loc 1 30 41 is_stmt 0 view .LVU44
+ 231 00c2 94F84030 		ldrb	r3, [r4, #64]	@ zero_extendqisi2
+ 232              		.loc 1 30 13 view .LVU45
+ 233 00c6 642B     		cmp	r3, #100
+ 234 00c8 F0D1     		bne	.L8
+  31:Modules/Src/wav.cpp ****             {
+  32:Modules/Src/wav.cpp ****                 f_read(file, &(this->wav_header.data_header[1]), 3, (UINT*)bytes_read); //Contains 
+ 235              		.loc 1 32 17 is_stmt 1 view .LVU46
+ 236              		.loc 1 32 23 is_stmt 0 view .LVU47
+ 237 00ca 0023     		movs	r3, #0
+ 238 00cc 0322     		movs	r2, #3
+ 239 00ce 04F14101 		add	r1, r4, #65
+ 240 00d2 2846     		mov	r0, r5
+ 241 00d4 FFF7FEFF 		bl	f_read
+ 242              	.LVL22:
+  33:Modules/Src/wav.cpp ****                 this ->wav_header. data_header[4] = '\0';
+ 243              		.loc 1 33 17 is_stmt 1 view .LVU48
+ 244              		.loc 1 33 51 is_stmt 0 view .LVU49
+ 245 00d8 0023     		movs	r3, #0
+ 246 00da 84F84430 		strb	r3, [r4, #68]
+  34:Modules/Src/wav.cpp ****                 res = strcmp(this->wav_header.data_header, this->wav_header.data_header_expected);
+ 247              		.loc 1 34 17 is_stmt 1 view .LVU50
+ 248              		.loc 1 34 29 is_stmt 0 view .LVU51
+ 249 00de 04F13001 		add	r1, r4, #48
+ 250 00e2 3046     		mov	r0, r6
+ 251 00e4 FFF7FEFF 		bl	strcmp
+ 252              	.LVL23:
+ 253              		.loc 1 34 21 view .LVU52
+ARM GAS  /tmp/ccn20qAL.s 			page 6
+
+
+ 254 00e8 47B2     		sxtb	r7, r0
+ 255              	.LVL24:
+  35:Modules/Src/wav.cpp ****                 if(res != 0) f_lseek(file, fptr);
+ 256              		.loc 1 35 17 is_stmt 1 view .LVU53
+ 257 00ea 002F     		cmp	r7, #0
+ 258 00ec DED0     		beq	.L8
+ 259              		.loc 1 35 30 discriminator 1 view .LVU54
+ 260              		.loc 1 35 37 is_stmt 0 discriminator 1 view .LVU55
+ 261 00ee 4146     		mov	r1, r8
+ 262 00f0 2846     		mov	r0, r5
+ 263 00f2 FFF7FEFF 		bl	f_lseek
+ 264              	.LVL25:
+ 265 00f6 D9E7     		b	.L8
+ 266              	.LVL26:
+ 267              	.L7:
+ 268              		.loc 1 35 37 discriminator 1 view .LVU56
+ 269              	.LBE4:
+ 270              	.LBE3:
+  36:Modules/Src/wav.cpp ****             }
+  37:Modules/Src/wav.cpp ****         }
+  38:Modules/Src/wav.cpp ****         f_read(&SDFile, &wav_header.data_bytes, 4, (UINT*)bytes_read); 
+ 271              		.loc 1 38 9 is_stmt 1 view .LVU57
+ 272              		.loc 1 38 15 is_stmt 0 view .LVU58
+ 273 00f8 0023     		movs	r3, #0
+ 274 00fa 0422     		movs	r2, #4
+ 275 00fc 04F13801 		add	r1, r4, #56
+ 276 0100 0248     		ldr	r0, .L11
+ 277 0102 FFF7FEFF 		bl	f_read
+ 278              	.LVL27:
+  39:Modules/Src/wav.cpp ****     }
+ 279              		.loc 1 39 5 view .LVU59
+ 280 0106 BDE8F081 		pop	{r4, r5, r6, r7, r8, pc}
+ 281              	.LVL28:
+ 282              	.L12:
+ 283              		.loc 1 39 5 view .LVU60
+ 284 010a 00BF     		.align	2
+ 285              	.L11:
+ 286 010c 00000000 		.word	SDFile
+ 287              		.cfi_endproc
+ 288              	.LFE139:
+ 289              		.fnend
+ 291              		.section	.rodata._ZN7Storage3WAV11is_wav_fileEPc.str1.4,"aMS",%progbits,1
+ 292              		.align	2
+ 293              	.LC1:
+ 294 0000 2E574156 		.ascii	".WAV\000"
+ 294      00
+ 295              		.section	.text._ZN7Storage3WAV11is_wav_fileEPc,"ax",%progbits
+ 296              		.align	1
+ 297              		.global	_ZN7Storage3WAV11is_wav_fileEPc
+ 298              		.syntax unified
+ 299              		.thumb
+ 300              		.thumb_func
+ 301              		.fpu fpv4-sp-d16
+ 303              	_ZN7Storage3WAV11is_wav_fileEPc:
+ 304              		.fnstart
+ 305              	.LVL29:
+ 306              	.LFB140:
+ARM GAS  /tmp/ccn20qAL.s 			page 7
+
+
+  40:Modules/Src/wav.cpp **** 
+  41:Modules/Src/wav.cpp ****     void WAV::is_wav_file(char* file_name)
+  42:Modules/Src/wav.cpp ****     {
+ 307              		.loc 1 42 5 is_stmt 1 view -0
+ 308              		.cfi_startproc
+ 309              		@ args = 0, pretend = 0, frame = 0
+ 310              		@ frame_needed = 0, uses_anonymous_args = 0
+ 311              		.loc 1 42 5 is_stmt 0 view .LVU62
+ 312 0000 38B5     		push	{r3, r4, r5, lr}
+ 313              	.LCFI2:
+ 314              		.cfi_def_cfa_offset 16
+ 315              		.cfi_offset 3, -16
+ 316              		.cfi_offset 4, -12
+ 317              		.cfi_offset 5, -8
+ 318              		.cfi_offset 14, -4
+ 319 0002 0446     		mov	r4, r0
+ 320 0004 0D46     		mov	r5, r1
+  43:Modules/Src/wav.cpp ****         if(strstr(file_name, ".WAV") != NULL)
+ 321              		.loc 1 43 9 is_stmt 1 view .LVU63
+ 322              		.loc 1 43 18 is_stmt 0 view .LVU64
+ 323 0006 0A49     		ldr	r1, .L16
+ 324              	.LVL30:
+ 325              		.loc 1 43 18 view .LVU65
+ 326 0008 2846     		mov	r0, r5
+ 327              	.LVL31:
+ 328              		.loc 1 43 18 view .LVU66
+ 329 000a FFF7FEFF 		bl	strstr
+ 330              	.LVL32:
+ 331              		.loc 1 43 9 view .LVU67
+ 332 000e 68B1     		cbz	r0, .L13
+  44:Modules/Src/wav.cpp ****         {
+  45:Modules/Src/wav.cpp ****             strcpy(&(this->wav_file_name[this->wav_file_count][0]), file_name);
+ 333              		.loc 1 45 13 is_stmt 1 view .LVU68
+ 334              		.loc 1 45 48 is_stmt 0 view .LVU69
+ 335 0010 94F84C05 		ldrb	r0, [r4, #1356]	@ zero_extendqisi2
+ 336              		.loc 1 45 19 view .LVU70
+ 337 0014 0001     		lsls	r0, r0, #4
+ 338 0016 00F58960 		add	r0, r0, #1096
+ 339 001a 2946     		mov	r1, r5
+ 340 001c 2044     		add	r0, r0, r4
+ 341 001e FFF7FEFF 		bl	strcpy
+ 342              	.LVL33:
+  46:Modules/Src/wav.cpp ****             this->wav_file_count++;
+ 343              		.loc 1 46 13 is_stmt 1 view .LVU71
+ 344              		.loc 1 46 19 is_stmt 0 view .LVU72
+ 345 0022 94F84C35 		ldrb	r3, [r4, #1356]	@ zero_extendqisi2
+ 346              		.loc 1 46 33 view .LVU73
+ 347 0026 0133     		adds	r3, r3, #1
+ 348 0028 84F84C35 		strb	r3, [r4, #1356]
+ 349              	.L13:
+  47:Modules/Src/wav.cpp ****         }
+  48:Modules/Src/wav.cpp ****     }
+ 350              		.loc 1 48 5 view .LVU74
+ 351 002c 38BD     		pop	{r3, r4, r5, pc}
+ 352              	.LVL34:
+ 353              	.L17:
+ 354              		.loc 1 48 5 view .LVU75
+ARM GAS  /tmp/ccn20qAL.s 			page 8
+
+
+ 355 002e 00BF     		.align	2
+ 356              	.L16:
+ 357 0030 00000000 		.word	.LC1
+ 358              		.cfi_endproc
+ 359              	.LFE140:
+ 360              		.cantunwind
+ 361              		.fnend
+ 363              		.global	_ZN7Storage3wavE
+ 364              		.section	.bss._ZN7Storage3wavE,"aw",%nobits
+ 365              		.align	2
+ 368              	_ZN7Storage3wavE:
+ 369 0000 00000000 		.space	4
+ 370              		.text
+ 371              	.Letext0:
+ 372              		.file 2 "Middlewares/Third_Party/FatFs/src/integer.h"
+ 373              		.file 3 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stdint.h"
+ 374              		.file 4 "Drivers/CMSIS/Include/core_cm4.h"
+ 375              		.file 5 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/system_stm32l4xx.h"
+ 376              		.file 6 "Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h"
+ 377              		.file 7 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_def.h"
+ 378              		.file 8 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_flash.h"
+ 379              		.file 9 "Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h"
+ 380              		.file 10 "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h"
+ 381              		.file 11 "Middlewares/Third_Party/FatFs/src/ff.h"
+ 382              		.file 12 "Middlewares/Third_Party/FatFs/src/diskio.h"
+ 383              		.file 13 "Middlewares/Third_Party/FatFs/src/ff_gen_drv.h"
+ 384              		.file 14 "FATFS/Target/sd_diskio.h"
+ 385              		.file 15 "FATFS/App/fatfs.h"
+ 386              		.file 16 "/usr/lib/gcc/arm-none-eabi/9.2.1/include/stddef.h"
+ 387              		.file 17 "/usr/include/newlib/sys/_types.h"
+ 388              		.file 18 "/usr/include/newlib/sys/reent.h"
+ 389              		.file 19 "/usr/include/newlib/sys/lock.h"
+ 390              		.file 20 "Modules/Inc/wav.h"
+ 391              		.file 21 "/usr/include/newlib/string.h"
+ARM GAS  /tmp/ccn20qAL.s 			page 9
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 wav.cpp
+     /tmp/ccn20qAL.s:18     .rodata._ZN7Storage3WAVC2Ev.str1.4:0000000000000000 $d
+     /tmp/ccn20qAL.s:22     .text._ZN7Storage3WAVC2Ev:0000000000000000 $t
+     /tmp/ccn20qAL.s:30     .text._ZN7Storage3WAVC2Ev:0000000000000000 _ZN7Storage3WAVC2Ev
+     /tmp/ccn20qAL.s:68     .text._ZN7Storage3WAVC2Ev:0000000000000024 $d
+.ARM.exidx.text._ZN7Storage3WAVC2Ev:0000000000000000 $d
+     /tmp/ccn20qAL.s:30     .text._ZN7Storage3WAVC2Ev:0000000000000000 _ZN7Storage3WAVC1Ev
+     /tmp/ccn20qAL.s:77     .text._ZN7Storage3WAV14get_wav_headerEP3FILPc:0000000000000000 $t
+     /tmp/ccn20qAL.s:84     .text._ZN7Storage3WAV14get_wav_headerEP3FILPc:0000000000000000 _ZN7Storage3WAV14get_wav_headerEP3FILPc
+     /tmp/ccn20qAL.s:286    .text._ZN7Storage3WAV14get_wav_headerEP3FILPc:000000000000010c $d
+.ARM.exidx.text._ZN7Storage3WAV14get_wav_headerEP3FILPc:0000000000000000 $d
+     /tmp/ccn20qAL.s:292    .rodata._ZN7Storage3WAV11is_wav_fileEPc.str1.4:0000000000000000 $d
+     /tmp/ccn20qAL.s:296    .text._ZN7Storage3WAV11is_wav_fileEPc:0000000000000000 $t
+     /tmp/ccn20qAL.s:303    .text._ZN7Storage3WAV11is_wav_fileEPc:0000000000000000 _ZN7Storage3WAV11is_wav_fileEPc
+     /tmp/ccn20qAL.s:357    .text._ZN7Storage3WAV11is_wav_fileEPc:0000000000000030 $d
+.ARM.exidx.text._ZN7Storage3WAV11is_wav_fileEPc:0000000000000000 $d
+     /tmp/ccn20qAL.s:368    .bss._ZN7Storage3wavE:0000000000000000 _ZN7Storage3wavE
+     /tmp/ccn20qAL.s:365    .bss._ZN7Storage3wavE:0000000000000000 $d
+
+UNDEFINED SYMBOLS
+memset
+f_open
+f_read
+strcmp
+f_lseek
+SDFile
+__aeabi_unwind_cpp_pr0
+strstr
+strcpy
